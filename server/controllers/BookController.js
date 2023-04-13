@@ -26,8 +26,9 @@ const deleteBook = async(req, res) => {
     console.log('deleting book')
 }
 
+/* exporting  */
+module.exports.getBooks = getBooks
+module.exports.getBook = getBook
 module.exports.addBook = addBook
 module.exports.updateBook = updateBook
 module.exports.deleteBook = deleteBook
-module.exports.getBooks = getBooks
-module.exports.getBook = getBook
