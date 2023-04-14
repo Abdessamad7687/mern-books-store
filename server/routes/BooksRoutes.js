@@ -6,4 +6,4 @@ const BookController = require('../controllers/BookController')
 
 router.get('/', BookController.getBooks)
 
-export  {router} 
+module.exports.router = router

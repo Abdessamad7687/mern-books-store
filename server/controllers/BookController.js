@@ -1,4 +1,6 @@
-import Book from "../models/Book"
+
+const Book = require('../models/Book')
+
 
 /* getting all Books */
 const  getBooks = async (req, res) => {
@@ -29,10 +31,11 @@ const deleteBook = async(req, res) => {
 
 /* exporting  */
 
-// module.exports.getBooks = getBooks
-// module.exports.getBook = getBook
-// module.exports.addBook = addBook
-// module.exports.updateBook = updateBook
-// module.exports.deleteBook = deleteBook
+module.exports.getBooks = getBooks
+module.exports.getBook = getBook
+module.exports.addBook = addBook
+module.exports.updateBook = updateBook
+module.exports.deleteBook = deleteBook
 
-export  {getBooks, getBook, addBook, updateBook, deleteBook }
+// export  {getBooks, getBook, addBook, updateBook, deleteBook }
+
