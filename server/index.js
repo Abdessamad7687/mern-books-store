@@ -1,7 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
-import BooksRoutes from "./routes/BooksRoutes"
+import router from "./routes/BooksRoutes.js"
 
 
 const app = express()
@@ -12,6 +12,6 @@ app.listen(process.env.PORT, () => console.log('app running on port ', process.e
 mongoose.connect(process.env.CONNECTION)
 .then(() => console.log('database connected'))
 
-app.use('/', BooksRoutes)
+app.use('/', router)
 
 
