@@ -1,9 +1,9 @@
-import express from "express"
+const express = require('express')
 
 const router = express.Router()
 
-import {getBooks, getBook, addBook, updateBook, deleteBook } from "../controllers/BookController"
+const BookController = require('../controllers/BookController')
 
-router.get('/', getBooks)
+router.get('/', BookController.getBooks)
 
 export  {router} 
