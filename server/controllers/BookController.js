@@ -2,7 +2,8 @@ import Book from "../models/Book"
 
 /* getting all Books */
 const  getBooks = async (req, res) => {
-    console.log('getting all books')
+    const books = await Book.Find({})
+    res.status(200).json(books) 
 }
 
 /* get single Book */
@@ -27,8 +28,11 @@ const deleteBook = async(req, res) => {
 }
 
 /* exporting  */
-module.exports.getBooks = getBooks
-module.exports.getBook = getBook
-module.exports.addBook = addBook
-module.exports.updateBook = updateBook
-module.exports.deleteBook = deleteBook
+
+// module.exports.getBooks = getBooks
+// module.exports.getBook = getBook
+// module.exports.addBook = addBook
+// module.exports.updateBook = updateBook
+// module.exports.deleteBook = deleteBook
+
+export  {getBooks, getBook, addBook, updateBook, deleteBook }
